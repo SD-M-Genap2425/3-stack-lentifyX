@@ -72,10 +72,10 @@ namespace Solution.BrowserHistory
         }
         public string Kembali()
         {
-            if (history.IsEmpty())
-                return "Empty";
-            history.Pop();
-            return history.IsEmpty() ? "Empty" : history.Peek()?.URL ?? "Empty";
+        if (history.IsEmpty())
+            return "Tidak ada halaman sebelumnya.";
+        history.Pop();
+        return history.IsEmpty() ? "Tidak ada halaman sebelumnya." : history.Peek()?.URL ?? "Tidak ada halaman sebelumnya.";
         }
         public string LihatHalamanSaatIni()
         {
